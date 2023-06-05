@@ -1,0 +1,45 @@
+React:
+1.HOC - Done
+2.PrivateRoute - Done
+3.Context with Reducer - Done
+4.Lazy = Done
+5.PureComponent - Done, Functional Pure Component - Later
+6.Userref (In Counter Folder(Counter useState and useRef)) - Done
+7.UseMemo - Done , React memo - Later
+8.Custom Hooks - Done
+9.useParams - Done
+10.Counter useState and useRef - Done
+11.React JWT Authentication - 
+12.Pass Data from Child to Parent - Done
+
+Redux:
+Counter - Done
+Redux Cycle 
+Async Thunk - Done
+RTK Query - Done
+Basic Crud App
+
+Questions:
+
+1. Use of 'useRef' Hook: - Done
+The useRef hook is a powerful tool in React that allows you to store and access mutable values that persist across re-renders of a component. It returns a mutable ref object whose current property can be used to store any value. The main use cases of useRef include accessing DOM elements, managing previous values, and preserving values between renders.
+Preserving values between renders: Unlike state variables, the values stored in useRef do not cause re-renders when they are updated. This makes it useful for preserving values between renders, such as a counter that shouldn't trigger a re-render.
+
+2. Map though an Object in JS:
+const reactionEmoji = {
+    thumbsUp: '👍',
+    wow: '😮',
+}
+    const reactionButtons = Object.entries(reactionEmoji).map(([name, emoji]) => {
+        return ({emoji} {name})}
+Output: 👍 thumbsUp
+	😮 wow
+
+3. React Life Cycle
+4. Real vs Virtual DOM
+5. Diff class based and function based Components
+6. Advantage of React
+7. Advantage of Next over React
+
+8. Deploy a Production React app:
+https://www.youtube.com/watch?v=yJe4ynOBzXA&t=171s
