@@ -16,8 +16,9 @@
 // import TodoList from "./components/Redux/Counter/TodoList";
 // import Child_To_Parent from './components/ChildToParent/Parent' 
 // import PaginatedPosts from "./components/Pagination/PaginatedPosts";
+import FolderStructure from './components/FolderStructure/FolderStructure'
 
-
+  
 function App() {
   return (
     // <UserContextProvider>
@@ -40,6 +41,7 @@ function App() {
         {/* <TodoList /> */}
         {/* <Child_To_Parent /> */}
         {/* <PaginatedPosts /> */}
+        <FolderStructure />
       </>
     // </UserContextProvider>
   );
