@@ -17,7 +17,7 @@ export const useFetch = (url, options) => {
                 if (e.name === 'AbortError') {
                     console.log('successfully aborted');
                 } else {
-                    // handle error
+                    console.error(e.message())
                 }
             }
         }
@@ -27,7 +27,7 @@ export const useFetch = (url, options) => {
         return () => {
             controller.abort()
         }
-    }, [])
+    }, [url, options])
 
     return data
 }
