@@ -5,17 +5,28 @@ export const useFetch = (url, options) => {
     const [data, setData] = useState(null)
 
     useEffect(() => {
+        const controller = new AbortController()
+        const signal = controller.signal
+
         const fetchData = async () => {
             try {
-                const res = await fetch(url, options)
+                const res = await fetch(url, options, { signal })
                 const data = await res.json()
                 setData(data)
             } catch (e) {
-                console.error(e.message())
+                if (e.name === 'AbortError') {
+                    console.log('successfully aborted');
+                } else {
+                    // handle error
+                }
             }
         }
 
         fetchData()
+
+        return () => {
+            controller.abort()
+        }
     }, [])
 
     return data

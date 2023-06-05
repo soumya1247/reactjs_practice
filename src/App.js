@@ -9,7 +9,7 @@
 // import Lazy from "./components/Lazy/Lazy";
 // import User from './components/Context/User'
 // import { UserContextProvider } from './components/Context/UserContext';
-// import CustomOutput from './components/CustomHook/CustomOutput';
+import CustomOutput from './components/CustomHook/CustomOutput';
 // import PureComponentRender from './components/PureComponent/PureComponentRender';
 // import UseMemo from './components/UseMemo/UseMemo';
 // import Counter from './components/Redux/Counter/Counter';
@@ -32,7 +32,7 @@ function App() {
     </Router> */}
         {/* <Lazy /> */}
         {/* <User /> */}
-        {/* <CustomOutput /> */}
+        <CustomOutput />
         {/* <PureComponentRender /> */}
         {/* <UseMemo /> */}
         {/* <Counter/> */}
