@@ -11,13 +11,14 @@ React:
 10.Counter useState and useRef - Done
 11.React JWT Authentication - 
 12.Pass Data from Child to Parent - Done
+13. Pagination - Done
+14. Folder Structure - Done
 
 Redux:
 Counter - Done
-Redux Cycle 
 Async Thunk - Done
 RTK Query - Done
-Basic Crud App
+Basic Crud App - Later
 
 Questions:
 
@@ -43,3 +44,10 @@ Output: 👍 thumbsUp
 
 8. Deploy a Production React app:
 https://www.youtube.com/watch?v=yJe4ynOBzXA&t=171s
+
+9.JS Event Loop:
+https://youtu.be/8aGhZQkoFbQ
+https://youtu.be/vn3tm0quoqE
+
+10: Redux Cycle 
+11: Micro Front ends
