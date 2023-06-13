@@ -2,32 +2,57 @@ import { useEffect, useState } from "react"
 
 export const useFetch = (url, options) => {
 
-    const [data, setData] = useState(null)
+    const [posts, setPosts] = useState([])
+    const [loading, setLoading] = useState(true)
+    const [error, setError] = useState(null)
 
     useEffect(() => {
         const controller = new AbortController()
         const signal = controller.signal
 
-        const fetchData = async () => {
+        const fetchPosts = async () => {
             try {
-                const res = await fetch(url, options, { signal })
+                const res = await fetch(url, options, signal)
                 const data = await res.json()
-                setData(data)
+                setPosts(data)
+                setLoading(false)
             } catch (e) {
+                setLoading(false)
                 if (e.name === 'AbortError') {
                     console.log('successfully aborted');
                 } else {
-                    console.error(e.message())
+                    console.error(e)
+                    setError(e)
                 }
             }
         }
 
-        fetchData()
+        fetchPosts()
 
         return () => {
             controller.abort()
         }
     }, [url, options])
 
-    return data
+    // const isMounted = useRef(true)
+
+    // useEffect(() => {
+    //     if (isMounted) {
+    //         const auth = getAuth()
+    //         onAuthStateChanged(auth, (user) => {
+    //             if (user) {
+    //                 setLoggedIn(true)
+    //             }
+    //             setCheckingStatus(false)
+    //         })
+    //     }
+
+    //     return () => {
+    //         isMounted.current = false
+    //     }
+    // }, [isMounted])
+
+
+
+    return { posts , loading, error }
 }
